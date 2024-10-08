@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link
+        href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+        rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css">
+    <title>MealDB</title>
+</head>
+<body>
+    
+    <header class="d-flex justify-content-between align-items-center px-4 py-3">
+        
+        <div class="d-flex align-items-center">
+            <img src="image.jpg" alt="Stella's Kitchen Logo" style="width: 150px; height: auto;">
+            <h1 class="ml-3" style="color: rgb(172, 63, 63);">Welcome to Stella's Kitchen</h1>
+        </div>
+        
+        <!-- Search section aligned to the right -->
+        <section class="search-section">
+            <input type="text" id="mealSearch" class="form-control d-inline-block w-auto" placeholder="Search for a meal...">
+            <button id="searchBtn" class="btn btn-primary ml-2">Search</button>
+            <button id="randomBtn" class="btn btn-secondary ml-2">Get Random Meal</button>
+        </section>
+    </header>
+    
+    <main>
+        <section id="mealDetails" class="meal-details">
+            <div class="row" id="meal-container"></div>
+        </section>
+    </main>
+
+    
+    <div class="modal fade" id="mealModal" tabindex="-1" role="dialog" aria-labelledby="mealModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="mealModalLabel">Meal Details</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body" id="mealModalContent">
+                    <div class="embed-responsive embed-responsive-16by9">
+                        <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/VIDEO_ID?autoplay=1" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+                      </div>
+                      
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+
+    <script src="./script.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

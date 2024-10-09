@@ -1,3 +1,4 @@
+
 body {
     font-family: Arial, sans-serif;
     margin: 0;
@@ -5,35 +6,100 @@ body {
     background-color: #f4f4f4;
 }
 
-
 header {
-    background-color : rgb(253, 204, 144); 
+    background-color: rgb(253, 204, 144); 
     color: white;
-    text-align: center;
     padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
 }
 
-h1 {
-    margin: 0;
+header h1 {
+    margin: 10px 0;
+    font-size: 24px; 
+
+header img {
+    width: 100px; 
+    height: auto;
 }
 
 .search-section {
     display: flex;
-    justify-content: center;
+    flex-direction: column; 
+    align-items: center;
+    width: 100%;
+    margin-top: 15px;
+}
+
+.search-section input,
+.search-section button {
+    width: 100%; 
+    max-width: 300px;
+    margin-bottom: 10px;
+}
+
+
+
+@media (min-width: 768px) {
+    header {
+        flex-direction: row; 
+        justify-content: space-between;
+        text-align: left;
+    }
+
+    header h1 {
+        font-size: 36px; 
+        margin-left: 20px;
+    }
+
+    .search-section {
+        flex-direction: row; 
+        width: auto;
+        margin-top: 0;
+    }
+
+    .search-section input {
+        margin-bottom: 0;
+    }
+}
+
+.meal-details {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     margin: 20px;
 }
 
-input[type="text"] {
-    padding: 10px;
-    font-size: 16px;
-    width: 300px;
+.meal-item {
+    margin-bottom: 20px;
+}
+
+.meal img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+
+@media (max-width: 767px) {
+    .col-md-3 {
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+    .col-md-3 {
+        flex: 0 0 50%; 
+        max-width: 50%;
+    }
 }
 
 
 button {
     padding: 10px;
     font-size: 16px;
-    margin-left: 10px;
     cursor: pointer;
     background-color: rgb(248, 199, 140);
     color: white;
@@ -45,68 +111,9 @@ button:hover {
     background-color: rgb(218, 242, 249); 
 }
 
-.meal-details {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin: 20px;
-}
-
-.meal {
-    background-color: white;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-    max-width: 600px;
-    text-align: center;
-}
-
-.meal img {
+/* Responsive modal */
+.modal-content img {
     width: 100%;
-    border-radius: 10px;
+    height: auto;
 }
 
-    .card-img-top {
-        width: 100%; 
-        height: 200px; 
-        object-fit: cover; 
-    }
-
-    
-.meal-container {
-    display: flex;
-    align-items: flex-start;
-    justify-content: space-between;
-  }
-  
-  
-  .meal-image {
-    width: 40%;
-    margin-right: 20px;
-  }
-  
-  
-  .ingredients {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr); /* 3 columns for ingredients */
-    gap: 20px;
-    text-align: center;
-  }
-  
-  .ingredient-item {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-  
-  .ingredient-item img {
-    width: 200px; 
-    height: auto;
-    margin-bottom: 10px;
-  }
-  
-  .ingredient-item p {
-    font-size: 16px;
-    color: #F7A634; 
-  }
-  
